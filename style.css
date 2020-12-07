@@ -1,0 +1,128 @@
+/* ============ only desktop view ============ */
+@media all and (min-width: 992px) {
+	.navbar .nav-item .dropdown-menu{  display:block; opacity: 0;  visibility: hidden; transition:.3s; margin-top:0;  }
+	.navbar .nav-item:hover .nav-link{ color: black;  }
+	.navbar .dropdown-menu.fade-down{ top:80%; transform: rotateX(-75deg); transform-origin: 0% 0%; }
+	.navbar .dropdown-menu.fade-up{ top:180%;  }
+	.navbar .nav-item:hover .dropdown-menu{ transition: .3s; opacity:1; visibility:visible; top:100%; transform: rotateX(0deg); }
+}		
+/* ============ desktop view .end// ============ */
+
+/*Jumbotron styling*/
+
+.jumbotron-image-1 {
+	background-image: url(images/img2.png);
+	background-position: left;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.jumbotron-image-2 {
+	background-image:url(images/img1.png);
+	background-position:right;
+	background-repeat: no-repeat , no-repeat;
+	background-size: contain , contain;
+}
+
+/*List styling*/
+
+.features {
+	padding: 0;
+	display: block;
+	width: 320px;
+}
+  
+.adv {
+	display: block;
+	height: 22px;
+	width: 400px;
+	padding: 1px;
+	animation-name: animateIn;
+	animation-duration: 350ms;
+	animation-delay: calc(var(--animation-order) * 200ms);
+	animation-fill-mode: both;
+	animation-timing-function: ease-in-out;
+}
+  
+.adv + .adv {
+	margin-top: 16px;
+}
+  
+@keyframes animateIn {
+	0% {
+	  opacity: 0;
+	  transform: scale(0.6) translateY(-8px);
+	}
+	
+	100% {
+	  opacity: 1;
+	}
+}
+
+/*Image and Captions styling*/
+
+.caption-style-2{
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	
+}
+
+.caption-style-2 li{
+	float:left;
+	padding: 0px;
+	position: relative;
+	overflow: hidden;
+}
+
+.caption-style-2 li:hover .caption{
+	opacity: 1;
+	transform: translateY(-100px);
+	-webkit-transform:translateY(-100px);
+	-moz-transform:translateY(-100px);
+	-ms-transform:translateY(-100px);
+	-o-transform:translateY(-100px);
+
+}
+
+
+.caption-style-2 img{
+	margin: 10px;
+	padding: 0px;
+	z-index: 4;
+	float: left;
+}
+
+
+.caption-style-2 .caption{
+	cursor: pointer;
+	position: absolute;
+	opacity: 0;
+	top:300px;
+	-webkit-transition:all 0.15s ease-in-out;
+	-moz-transition:all 0.15s ease-in-out;
+	-o-transition:all 0.15s ease-in-out;
+	-ms-transition:all 0.15s ease-in-out;
+	transition:all 0.15s ease-in-out;
+
+}
+.caption-style-2 .blur{
+	background-color: rgba(85, 78, 78, 0.7);
+	height: 250px;
+	width: 250px;
+	z-index: 5;
+	position: absolute;
+}
+
+.caption-style-2 .caption-text h1{
+	text-transform: uppercase;
+	font-size: 18px;
+}
+.caption-style-2 .caption-text{
+	z-index: 10;
+	color: white;
+	position: absolute;
+	width: 250px;
+	height: 250px;
+	text-align: center;
+	top:10px;
+}
